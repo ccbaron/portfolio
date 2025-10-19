@@ -7,12 +7,15 @@
   "scripts": {
     "dev": "vite",
     "dev:force": "vite --force",
+    "dev:hot": "vite --force --host",
+    "dev:clean": "rm -rf node_modules/.vite .vite && npm run dev:hot",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "clean": "rm -rf node_modules/.vite node_modules/.tmp dist .vite",
-    "fresh": "npm run clean && npm run dev:force"
+    "fresh": "npm run clean && npm run dev:force",
+    "clear-cache": "rm -rf node_modules/.vite .vite dist"
   },
   "dependencies": {
     "vue": "^3.5.22",

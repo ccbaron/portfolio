@@ -19,6 +19,19 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true
+    open: true,
+    // 🔥 Configuración para hot reload agresivo
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
+    hmr: {
+      overlay: true,
+      port: 3001,
+    },
+  },
+  // 🔥 Optimización de dependencias más agresiva
+  optimizeDeps: {
+    force: true,
   }
 })

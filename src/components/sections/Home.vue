@@ -36,10 +36,11 @@
 
         <!-- Subtitle -->
         <div class="animate-slide-up" style="animation-delay: 0.4s">
-          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Desarrollador Full Stack especializado en crear experiencias web excepcionales 
-            con tecnologías modernas como Vue.js, React, Node.js y TypeScript
-          </p>
+          <div class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+            <span class="block">Growth Marketing Specialist & Desarrollador Full Stack</span>
+            <span class="block">especializado en crear experiencias web excepcionales 
+            con tecnologías modernas como Vue.js, React, Node.js y TypeScript</span>
+          </div>
         </div>
 
         <!-- Skills Tags -->
