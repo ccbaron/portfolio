@@ -29,7 +29,7 @@
           <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4">
             Hola, soy 
             <span class="bg-gradient-to-r from-primary-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              CC Baron
+              Christian Baron
             </span>
           </h1>
         </div>

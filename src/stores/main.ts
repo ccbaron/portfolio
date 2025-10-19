@@ -11,18 +11,38 @@ export const useMainStore = defineStore('main', () => {
   // Actions
   const toggleTheme = () => {
     theme.value = theme.value === 'light' ? 'dark' : 'light'
-    document.documentElement.classList.toggle('dark', theme.value === 'dark')
+    
+    // Aplicar la clase al HTML
+    if (theme.value === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    
+    // Guardar en localStorage
     localStorage.setItem('theme', theme.value)
+    
+    console.log('Theme toggled to:', theme.value) // Debug temporal
   }
 
   const initTheme = () => {
     const savedTheme = localStorage.getItem('theme') as Theme
-    if (savedTheme) {
+    if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
       theme.value = savedTheme
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       theme.value = 'dark'
+    } else {
+      theme.value = 'light'
     }
-    document.documentElement.classList.toggle('dark', theme.value === 'dark')
+    
+    // Asegurar que la clase se aplique correctamente
+    if (theme.value === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    
+    console.log('Theme initialized:', theme.value) // Debug temporal
   }
 
   const toggleMenu = () => {
