@@ -5,8 +5,31 @@
     
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-200/30 dark:bg-primary-800/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-bounce-slow"></div>
-      <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-200/30 dark:bg-blue-800/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-bounce-slow" style="animation-delay: -2s"></div>
+      <!-- Línea horizontal que se mueve lateralmente -->
+      <div 
+        class="absolute top-1/4 w-96 h-0.5 bg-gradient-to-r from-transparent via-primary-300/20 to-transparent"
+        style="
+          animation: moveHorizontal 8s ease-in-out infinite;
+        "
+      ></div>
+      
+      <!-- Segunda línea con delay -->
+      <div 
+        class="absolute top-1/2 w-64 h-0.5 bg-gradient-to-r from-transparent via-blue-400/15 to-transparent"
+        style="
+          animation: moveHorizontalReverse 12s ease-in-out infinite;
+          animation-delay: -4s;
+        "
+      ></div>
+      
+      <!-- Tercera línea diagonal -->
+      <div 
+        class="absolute bottom-1/3 w-80 h-0.5 bg-gradient-to-r from-transparent via-indigo-300/10 to-transparent transform rotate-12"
+        style="
+          animation: moveHorizontal 15s ease-in-out infinite;
+          animation-delay: -8s;
+        "
+      ></div>
     </div>
 
     <!-- Content -->
@@ -102,3 +125,39 @@ const skills = [
   'Docker', 'Git', 'Tailwind CSS', 'Figma'
 ]
 </script>
+
+<style>
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes moveHorizontalReverse {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+}
+</style>
