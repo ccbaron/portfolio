@@ -16,9 +16,9 @@
         <div>
           <div class="prose prose-lg dark:prose-invert">
             <p class="text-gray-600 dark:text-gray-300 mb-6">
-              Soy un desarrollador Full Stack con más de 5 años de experiencia creando 
+              Groeth Marketing Specialist & desarrollador Full Stack con más de 3 años de experiencia en el ámbito del marketing y 1 año en desarrollo web. La sinergia de estas dos disciplinas me ha permitido crear 
               aplicaciones web modernas y escalables. Me especializo en el ecosistema 
-              JavaScript/TypeScript, tanto en frontend como en backend.
+              JavaScript/TypeScript, tanto en frontend como en backend, utilizando frameworks como Vue.js, React y Node.js.
             </p>
             
             <p class="text-gray-600 dark:text-gray-300 mb-6">
@@ -32,8 +32,8 @@
                 Experiencia Destacada
               </h3>
               <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-                <li>• +50 proyectos web completados exitosamente</li>
-                <li>• Liderazgo de equipos de desarrollo de 3-8 personas</li>
+                <li>• +5 proyectos web completados exitosamente</li>
+                <li>• Liderazgo de equipos de desarrollo de 3 personas</li>
                 <li>• Implementación de arquitecturas serverless en AWS</li>
                 <li>• Optimización de rendimiento web (+40% mejora promedio)</li>
               </ul>

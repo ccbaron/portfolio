@@ -7,7 +7,7 @@
     <div class="absolute inset-0 overflow-hidden">
       <!-- Línea horizontal que se mueve lateralmente -->
       <div 
-        class="absolute top-1/4 w-96 h-0.5 bg-gradient-to-r from-transparent via-primary-300/20 to-transparent"
+        class="absolute top-1/4 w-96 h-2.0 bg-gradient-to-r from-transparent via-primary-300/20 to-transparent"
         style="
           animation: moveHorizontal 8s ease-in-out infinite;
         "
@@ -15,7 +15,7 @@
       
       <!-- Segunda línea con delay -->
       <div 
-        class="absolute top-1/2 w-64 h-0.5 bg-gradient-to-r from-transparent via-blue-400/15 to-transparent"
+        class="absolute top-1/2 w-64 h-1.5 bg-gradient-to-r from-transparent via-blue-400/15 to-transparent"
         style="
           animation: moveHorizontalReverse 12s ease-in-out infinite;
           animation-delay: -4s;
@@ -24,7 +24,7 @@
       
       <!-- Tercera línea diagonal -->
       <div 
-        class="absolute bottom-1/3 w-80 h-0.5 bg-gradient-to-r from-transparent via-indigo-300/10 to-transparent transform rotate-12"
+        class="absolute bottom-1/3 w-80 h-1.5 bg-gradient-to-r from-transparent via-indigo-300/10 to-transparent transform rotate-12"
         style="
           animation: moveHorizontal 15s ease-in-out infinite;
           animation-delay: -8s;
