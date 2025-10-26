@@ -1,0 +1,11 @@
+# Netlify _redirects file for SPA (Single Page Application)
+# This file ensures that all routes are handled by Vue Router
+
+# Redirect all routes to index.html for client-side routing
+/*    /index.html   200
+
+# Optional: API redirects (if you add a backend later)
+# /api/*  https://your-api-domain.com/api/:splat  200
+
+# Optional: Specific redirects for old URLs
+# /old-portfolio  /  301

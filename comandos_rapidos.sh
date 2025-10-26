@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 🚀 GUÍA DE COMANDOS RÁPIDOS - CC BARON PORTFOLIO
+# GUÍA DE COMANDOS RÁPIDOS - CC BARON PORTFOLIO
 # ================================================
 
 echo "🎯 CC Baron Portfolio - Comandos de Desarrollo"
@@ -134,7 +134,4 @@ echo "TypeScript:      https://www.typescriptlang.org/docs/"
 echo "Tailwind CSS:    https://tailwindcss.com/docs"
 echo "Vite:            https://vitejs.dev/guide/"
 echo "Pinia:           https://pinia.vuejs.org/"
-
-echo ""
-echo "✅ ¡Portfolio listo para impresionar! 🚀"
-echo "======================================"
+echo "Netlify Docs:    https://docs.netlify.com/"

@@ -1,0 +1,70 @@
+# Netlify Configuration File
+# Documentación: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Comando que ejecuta Netlify para construir tu sitio
+  command = "npm run build"
+  
+  # Directorio que contiene los archivos finales para servir
+  publish = "dist"
+  
+  # Directorio base (por si tu proyecto estuviera en una subcarpeta)
+  base = "."
+
+[build.environment]
+  # Versión de Node.js a usar (importante para compatibilidad)
+  NODE_VERSION = "18"
+  
+  # Optimización de npm para builds más rápidos
+  NPM_FLAGS = "--production=false"
+
+# Configuración de headers HTTP para optimización
+[[headers]]
+  # Aplicar a todos los archivos
+  for = "/*"
+  [headers.values]
+    # Seguridad: Prevenir ataques XSS
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    
+    # Performance: Compresión
+    Vary = "Accept-Encoding"
+    
+    # SEO: Tiempo de caché
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Headers específicos para assets estáticos (imágenes, CSS, JS)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    # Cache largo para assets con hash en el nombre
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers específicos para el favicon
+[[headers]]
+  for = "/favicon.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Configuración de redirecciones (ya tienes _redirects, esto es backup)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  
+# Configuración para formularios (si agregas ContactForm real más tarde)
+# [[redirects]]
+#   from = "/api/*"
+#   to = "/.netlify/functions/:splat"
+#   status = 200
+
+# Plugin para optimización automática de imágenes
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
+
+# Configuración de desarrollo local
+[dev]
+  command = "npm run dev"
+  port = 3000
+  publish = "dist"

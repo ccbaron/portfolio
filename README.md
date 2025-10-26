@@ -1,8 +1,8 @@
-# CC Baron - Portfolio Web 🚀
+# CC Baron - Portfolio Web 
 
 Portfolio profesional desarrollado con Vue 3, TypeScript, Tailwind CSS y Vite. Un sitio web moderno y responsivo que muestra mis habilidades como desarrollador Full Stack.
 
-## ✨ Características
+## Características
 
 - **Vue 3** con Composition API y `<script setup>`
 - **TypeScript** para un desarrollo más seguro y mantenible
@@ -15,7 +15,7 @@ Portfolio profesional desarrollado con Vue 3, TypeScript, Tailwind CSS y Vite. U
 - **Responsive design** para todos los dispositivos
 - **Arquitectura escalable** con separación de responsabilidades
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 ### Frontend
 - Vue.js 3.5+
@@ -31,25 +31,25 @@ Portfolio profesional desarrollado con Vue 3, TypeScript, Tailwind CSS y Vite. U
 - Git hooks con Husky
 - Deployment automático
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 ccbaron-portfolio/
 ├── public/                 # Archivos estáticos
 ├── src/
-│   ├── assets/            # Imágenes, iconos, fuentes
-│   ├── components/        # Componentes Vue
-│   │   ├── layout/        # Layouts (Header, Footer, etc.)
-│   │   ├── sections/      # Secciones principales
-│   │   └── ui/           # Componentes UI reutilizables
-│   ├── composables/       # Composables de Vue
-│   ├── router/           # Configuración de rutas
-│   ├── stores/           # Stores de Pinia
-│   ├── types/            # Tipos TypeScript
-│   ├── utils/            # Utilidades y helpers
-│   ├── App.vue           # Componente raíz
-│   ├── main.ts           # Punto de entrada
-│   └── styles.css        # Estilos globales
+│   ├── assets/             # Imágenes, iconos, fuentes
+│   ├── components/         # Componentes Vue
+│   │   ├── layout/         # Layouts (Header, Footer, etc.)
+│   │   ├── sections/       # Secciones principales
+│   │   └── ui/             # Componentes UI reutilizables
+│   ├── composables/        # Composables de Vue
+│   ├── router/             # Configuración de rutas
+│   ├── stores/             # Stores de Pinia
+│   ├── types/              # Tipos TypeScript
+│   ├── utils/              # Utilidades y helpers
+│   ├── App.vue             # Componente raíz
+│   ├── main.ts             # Punto de entrada
+│   └── styles.css          # Estilos globales
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
@@ -57,7 +57,7 @@ ccbaron-portfolio/
 └── README.md
 ```
 
-## 🚀 Inicio Rápido
+## Inicio Rápido
 
 ### Prerrequisitos
 - Node.js 18+ 
@@ -98,7 +98,7 @@ npm run type-check   # Verificación de tipos TypeScript
 npm run lint         # Linting con ESLint
 ```
 
-## 🎨 Personalización
+## Personalización
 
 ### Temas y Colores
 Los colores principales se pueden personalizar en `tailwind.config.js`:
@@ -120,14 +120,14 @@ theme: {
 - Modifica los proyectos en `src/components/sections/Projects.vue`
 - Cambia los datos de contacto en `src/components/sections/Contact.vue`
 
-## 📱 Secciones
+## Secciones
 
 - **Home**: Presentación principal con llamada a la acción
 - **Acerca**: Información personal, habilidades y experiencia
 - **Proyectos**: Portfolio de trabajos con filtros por categoría
 - **Contacto**: Formulario de contacto y información personal
 
-## 🌐 Deploy
+## Deploy
 
 ### Netlify (Recomendado)
 ```bash
@@ -147,7 +147,7 @@ npm run build
 # Configura GitHub Actions para deploy automático
 ```
 
-## 🤝 Contribución
+## Contribución
 
 Las contribuciones son bienvenidas. Para cambios importantes:
 
@@ -157,19 +157,19 @@ Las contribuciones son bienvenidas. Para cambios importantes:
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para más detalles.
 
-## 📧 Contacto
+## Contacto
 
 **CC Baron** - Desarrollador Full Stack
 
 - 📧 Email: contacto@ccbaron.dev
 - 🌐 Web: [ccbaron.dev](https://ccbaron.dev)
-- 💼 LinkedIn: [linkedin.com/in/ccbaron](https://linkedin.com/in/ccbaron)
+- 💼 LinkedIn: [linkedin.com/in/ccbaron](https://linkedin.com/in/christianbaron-)
 - 🐙 GitHub: [github.com/ccbaron](https://github.com/ccbaron)
 
 ---
 
-⭐ **¡Si este proyecto te ha sido útil, considera darle una estrella!** ⭐
+**¡Si este proyecto te ha sido útil, considera darle una estrella!**
