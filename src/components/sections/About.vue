@@ -16,14 +16,14 @@
         <div>
           <div class="prose prose-lg dark:prose-invert">
             <p class="text-gray-600 dark:text-gray-300 mb-6">
-              Groeth Marketing Specialist & desarrollador Full Stack con más de 3 años de experiencia en el ámbito del marketing y 1 año en desarrollo web. La sinergia de estas dos disciplinas me ha permitido crear 
-              aplicaciones web modernas y escalables. Me especializo en el ecosistema 
+              Groeth Marketing Specialist & desarrollador Full Stack con más de 5 años de experiencia en el ámbito del marketing y 1 año en desarrollo web. La sinergia de estas dos disciplinas me ha permitido crear
+              aplicaciones web modernas y escalables. Me especializo en el ecosistema
               JavaScript/TypeScript, tanto en frontend como en backend, utilizando frameworks como Vue.js, React y Node.js.
             </p>
-            
+
             <p class="text-gray-600 dark:text-gray-300 mb-6">
-              Mi enfoque se centra en escribir código limpio, mantenible y eficiente, 
-              siempre siguiendo las mejores prácticas de la industria. Disfruto trabajando 
+              Mi enfoque se centra en escribir código limpio, mantenible y eficiente,
+              siempre siguiendo las mejores prácticas de la industria. Disfruto trabajando
               en equipo y contribuyendo a proyectos que generen un impacto real.
             </p>
 
@@ -33,7 +33,7 @@
               </h3>
               <ul class="space-y-2 text-gray-600 dark:text-gray-300">
                 <li>• +5 proyectos web completados exitosamente</li>
-                <li>• Liderazgo de equipos de desarrollo de 3 personas</li>
+                <li>• Liderazgo de proyectos tecnológicos</li>
                 <li>• Implementación de arquitecturas serverless en AWS</li>
                 <li>• Optimización de rendimiento web (+40% mejora promedio)</li>
               </ul>
@@ -54,8 +54,8 @@
         <!-- Skills Grid -->
         <div>
           <div class="grid grid-cols-2 gap-6">
-            <div 
-              v-for="category in skillCategories" 
+            <div
+              v-for="category in skillCategories"
               :key="category.name"
               class="bg-gray-50 dark:bg-dark-800 rounded-xl p-6 hover:shadow-lg transition-shadow"
             >
@@ -64,8 +64,8 @@
                 {{ category.name }}
               </h3>
               <ul class="space-y-2">
-                <li 
-                  v-for="skill in category.skills" 
+                <li
+                  v-for="skill in category.skills"
                   :key="skill"
                   class="text-sm text-gray-600 dark:text-gray-400"
                 >

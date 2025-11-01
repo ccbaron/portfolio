@@ -1,0 +1,27 @@
+{
+  // Auto-save configuration - Industry standard
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // Save when switching files/windows - Professional workflow
+  "files.autoSaveWhenNoErrors": true,
+
+  // Format on save - Code quality
+  "editor.formatOnSave": true,
+
+  // Vue.js specific optimizations
+  "vetur.format.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // Better development experience
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // Vite/Vue specific
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single"
+}

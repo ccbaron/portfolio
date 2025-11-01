@@ -55,11 +55,11 @@
                 ⭐ Destacado
               </div>
             </div>
-            
+
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
               {{ project.title }}
             </h3>
-            
+
             <p class="text-gray-600 dark:text-gray-400 mb-4">
               {{ project.description }}
             </p>
@@ -170,8 +170,8 @@ const projects: Project[] = [
   {
     id: '5',
     title: 'Portfolio Interactivo',
-    description: 'Sitio web personal con animaciones suaves, tema oscuro/claro y optimizado para SEO.',
-    technologies: ['Vue.js', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    description: 'Sitio web personal con animaciones suaves, tema oscuro/claro con optimización para SEO y rendimiento.',
+    technologies: ['Vue.js', 'Node.js', 'TypeScript', 'Tailwind CSS', 'Vite'],
     image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop&auto=format',
     liveUrl: 'https://ccbaron.dev',
     githubUrl: 'https://github.com/ccbaron/portfolio',

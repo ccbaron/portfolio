@@ -6,7 +6,7 @@
         <div>
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">CC Baron</h3>
           <p class="text-gray-600 dark:text-gray-400 mb-4">
-            Growth Marketing Specialist & Desarrollador Full Stack apasionado por crear aplicaciones web excepcionales 
+            Growth Marketing Specialist & Desarrollador Full Stack apasionado por crear aplicaciones web excepcionales
             y soluciones tecnológicas innovadoras.
           </p>
         </div>
@@ -16,7 +16,7 @@
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Enlaces Rápidos</h3>
           <ul class="space-y-2">
             <li v-for="item in quickLinks" :key="item.name">
-              <router-link 
+              <router-link
                 :to="item.href"
                 class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
               >
@@ -30,8 +30,8 @@
         <div>
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Conecta Conmigo</h3>
           <div class="flex space-x-4 mb-4">
-            <a 
-              v-for="social in socialLinks" 
+            <a
+              v-for="social in socialLinks"
               :key="social.name"
               :href="social.url"
               target="_blank"
@@ -45,14 +45,14 @@
             </a>
           </div>
           <p class="text-gray-600 dark:text-gray-400 text-sm">
-            📧 contacto@ccbaron.dev<br>
+            📧 contacto@ccbaron.com<br>
             📱 +34 (613) 613-363
           </p>
         </div>
       </div>
 
       <hr class="my-8 border-gray-200 dark:border-dark-700" />
-      
+
       <div class="flex flex-col sm:flex-row justify-between items-center">
         <p class="text-gray-600 dark:text-gray-400 text-sm">
           © {{ new Date().getFullYear() }} CC Baron. Todos los derechos reservados.

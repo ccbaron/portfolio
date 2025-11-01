@@ -17,7 +17,7 @@
           <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
             Información de Contacto
           </h3>
-          
+
           <div class="space-y-6">
             <div class="flex items-center">
               <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/20 rounded-lg flex items-center justify-center">
@@ -27,7 +27,7 @@
               </div>
               <div class="ml-4">
                 <p class="text-lg font-medium text-gray-900 dark:text-white">Email</p>
-                <p class="text-gray-600 dark:text-gray-400">contacto@ccbaron.dev</p>
+                <p class="text-gray-600 dark:text-gray-400">contacto@ccbaron.com</p>
               </div>
             </div>
 
@@ -201,16 +201,16 @@ const socialLinks = [
 
 const submitForm = async () => {
   isSubmitting.value = true
-  
+
   // Simular envío del formulario
   await new Promise(resolve => setTimeout(resolve, 1500))
-  
+
   // Aquí integrarías con tu servicio de email (EmailJS, Netlify Forms, etc.)
   console.log('Form submitted:', form.value)
-  
+
   isSubmitting.value = false
   submitted.value = true
-  
+
   // Reset form after 3 seconds
   setTimeout(() => {
     form.value = { name: '', email: '', subject: '', message: '' }
