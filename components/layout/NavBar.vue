@@ -34,9 +34,9 @@
             class="p-2 rounded-lg bg-gray-100 dark:bg-dark-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
             aria-label="Toggle theme"
           >
+            <!-- Moon: visible in light mode -->
             <svg
-              v-if="mainStore.theme === 'light'"
-              class="w-5 h-5"
+              class="w-5 h-5 dark:hidden"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -48,9 +48,9 @@
                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
               />
             </svg>
+            <!-- Sun: visible in dark mode -->
             <svg
-              v-else
-              class="w-5 h-5"
+              class="w-5 h-5 hidden dark:block"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -125,9 +125,9 @@
           @click="mainStore.toggleTheme"
           class="w-full flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-dark-800 rounded-lg font-medium transition-colors"
         >
+          <!-- Moon: visible in light mode -->
           <svg
-            v-if="mainStore.theme === 'light'"
-            class="w-5 h-5 mr-3"
+            class="w-5 h-5 mr-3 dark:hidden"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -139,9 +139,9 @@
               d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
             />
           </svg>
+          <!-- Sun: visible in dark mode -->
           <svg
-            v-else
-            class="w-5 h-5 mr-3"
+            class="w-5 h-5 mr-3 hidden dark:block"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

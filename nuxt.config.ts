@@ -73,6 +73,14 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
         },
       ],
+      // Runs before first paint: applies 'dark' class from localStorage or
+      // system preference to prevent flash of unstyled content in SSR.
+      script: [
+        {
+          innerHTML: `try{var s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s===null&&p)){document.documentElement.classList.add('dark')}}catch(e){}`,
+          tagPosition: "head",
+        },
+      ],
     },
   },
 
