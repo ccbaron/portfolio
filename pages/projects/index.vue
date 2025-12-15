@@ -36,7 +36,7 @@
         <div
           v-for="project in filteredProjects"
           :key="project.id"
-          class="bg-white dark:bg-dark-900 rounded-xl shadow-lg hover:shadow-xl overflow-hidden group transform hover:-translate-y-2 transition-all duration-300"
+          class="bg-white dark:bg-dark-900 rounded-xl shadow-lg hover:shadow-xl overflow-hidden group transform hover:-translate-y-2 transition-all duration-300 flex flex-col"
         >
           <!-- Project Image / Color Band -->
           <div
@@ -65,7 +65,7 @@
           </div>
 
           <!-- Project Content -->
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <div class="flex items-center justify-between mb-2">
               <span
                 class="text-xs font-medium text-primary-600 dark:text-primary-400 uppercase tracking-wide"
@@ -80,9 +80,14 @@
               </div>
             </div>
 
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-              {{ project.title }}
-            </h3>
+            <!-- Title links to detail page -->
+            <NuxtLink :to="`/projects/${project.id}`">
+              <h3
+                class="text-xl font-bold text-gray-900 dark:text-white mb-2 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >
+                {{ project.title }}
+              </h3>
+            </NuxtLink>
 
             <p
               class="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed"
@@ -102,7 +107,10 @@
             </div>
 
             <!-- Project Links — public -->
-            <div v-if="project.access !== 'private'" class="flex space-x-3">
+            <div
+              v-if="project.access !== 'private'"
+              class="flex flex-wrap gap-3 mt-auto"
+            >
               <a
                 v-if="project.liveUrl"
                 :href="project.liveUrl"
@@ -143,19 +151,55 @@
                 </svg>
                 Código
               </a>
+              <!-- Link to detail page -->
+              <NuxtLink
+                :to="`/projects/${project.id}`"
+                class="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gray-100 dark:bg-dark-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
+              >
+                Ver proyecto
+                <svg
+                  class="w-4 h-4 ml-1.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </NuxtLink>
             </div>
 
             <!-- Project Links — private -->
-            <div v-else>
-              <p class="text-xs text-gray-400 dark:text-gray-500 mb-3">
-                Demo y código disponibles bajo solicitud.
-              </p>
+            <div v-else class="flex flex-wrap gap-3 mt-auto">
+              <NuxtLink
+                :to="`/projects/${project.id}`"
+                class="flex-1 inline-flex items-center justify-center whitespace-nowrap px-4 py-2 bg-gray-100 dark:bg-dark-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
+              >
+                Ver proyecto
+                <svg
+                  class="w-4 h-4 ml-1.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </NuxtLink>
               <NuxtLink
                 to="/contact"
-                class="w-full inline-flex items-center justify-center px-4 py-2 bg-gray-100 dark:bg-dark-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
+                class="flex-1 inline-flex items-center justify-center whitespace-nowrap px-4 py-2 bg-gray-100 dark:bg-dark-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
               >
                 <svg
-                  class="w-4 h-4 mr-2"
+                  class="w-4 h-4 mr-2 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -186,102 +230,11 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
-
-// 'access' controls how links are displayed:
-//   'public'  — shows demo + code links normally
-//   'private' — hides links, shows "Solicitar acceso" button instead
-type ProjectAccess = "public" | "private";
-
-interface PortfolioProject {
-  id: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  gradient: string; // Tailwind gradient classes for the image band
-  liveUrl?: string;
-  githubUrl?: string;
-  featured: boolean;
-  categories: Array<"web" | "fullstack" | "ai">; // array to allow multi-category filtering
-  categoryLabel: string; // human-readable label shown on the card
-  access: ProjectAccess;
-}
+import { projects } from "~/data/projects";
 
 const activeCategory = ref("Todos");
 
 const categories = ["Todos", "IA", "Full Stack", "Web"];
-
-const projects: PortfolioProject[] = [
-  {
-    id: "content-intelligence-agent",
-    title: "Content Intelligence Agent",
-    description:
-      "Herramienta de estrategia de contenido e investigación asistida por IA. Automatiza la identificación de oportunidades, el análisis de competencia y la estructuración de briefs editoriales, reduciendo el tiempo de investigación manual.",
-    technologies: [
-      "OpenAI API",
-      "Node.js",
-      "Vue.js",
-      "PostgreSQL",
-      "TypeScript",
-    ],
-    gradient:
-      "bg-gradient-to-br from-violet-100 to-indigo-100 dark:from-violet-900/20 dark:to-indigo-900/20",
-    featured: true,
-    categories: ["ai"],
-    categoryLabel: "IA Aplicada",
-    access: "public",
-    // liveUrl: '',   // añadir cuando esté desplegado
-    // githubUrl: '', // añadir cuando sea público
-  },
-  {
-    id: "leadflow-ai",
-    title: "Leadflow AI",
-    description:
-      "Plataforma de captación, scoring y priorización de leads mediante automatización e IA. Diseñada con foco en conversión y lógica de producto orientada a negocio real: flujos de calificación, segmentación automática y panel de gestión.",
-    technologies: ["Nuxt", "Vue.js", "Node.js", "OpenAI API", "PostgreSQL"],
-    gradient:
-      "bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/20 dark:to-cyan-900/20",
-    featured: true,
-    categories: ["fullstack", "ai"], // aparece en ambos filtros
-    categoryLabel: "Full Stack · IA",
-    access: "private", // demo y código disponibles bajo solicitud
-  },
-  {
-    id: "book-joy",
-    title: "Book Joy",
-    description:
-      "Aplicación web de reservas y gestión de alojamientos. Producto full stack con lógica real de disponibilidad, flujo de reserva completo, panel de administración y experiencia de usuario orientada a conversión.",
-    technologies: [
-      "Vue.js",
-      "Node.js",
-      "PostgreSQL",
-      "Tailwind CSS",
-      "TypeScript",
-    ],
-    gradient:
-      "bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-900/20 dark:to-teal-900/20",
-    featured: false,
-    categories: ["fullstack"],
-    categoryLabel: "Full Stack",
-    access: "public",
-    // liveUrl: '',
-    // githubUrl: '',
-  },
-  {
-    id: "entire-base",
-    title: "Entire Base",
-    description:
-      "Plataforma web construida con criterio de posicionamiento digital y experiencia de usuario. Arquitectura de información clara, branding coherente y estructura orientada a captación y conversión.",
-    technologies: ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript"],
-    gradient:
-      "bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/20 dark:to-orange-900/20",
-    featured: false,
-    categories: ["web"],
-    categoryLabel: "Web",
-    access: "public",
-    // liveUrl: '',
-    // githubUrl: '',
-  },
-];
 
 const filteredProjects = computed(() => {
   if (activeCategory.value === "Todos") return projects;
