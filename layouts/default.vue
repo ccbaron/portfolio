@@ -2,11 +2,11 @@
   <div
     class="min-h-screen bg-white dark:bg-dark-900 transition-colors duration-300"
   >
-    <NavBar />
+    <LayoutNavBar />
     <main>
       <slot />
     </main>
-    <Footer />
+    <LayoutFooter />
   </div>
 </template>
 

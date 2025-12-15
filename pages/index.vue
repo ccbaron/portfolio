@@ -10,18 +10,18 @@
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden">
       <div
-        class="absolute top-1/4 w-96 h-2.0 bg-gradient-to-r from-transparent via-primary-300/20 to-transparent"
+        class="absolute top-[45%] w-96 h-0.5 bg-gradient-to-r from-transparent via-primary-300/40 to-transparent"
         style="animation: moveHorizontal 8s ease-in-out infinite"
       ></div>
       <div
-        class="absolute top-1/2 w-64 h-1.5 bg-gradient-to-r from-transparent via-blue-400/15 to-transparent"
+        class="absolute top-[62%] w-64 h-1.5 bg-gradient-to-r from-transparent via-blue-400/15 to-transparent"
         style="
           animation: moveHorizontalReverse 12s ease-in-out infinite;
           animation-delay: -4s;
         "
       ></div>
       <div
-        class="absolute bottom-1/3 w-80 h-1.5 bg-gradient-to-r from-transparent via-indigo-300/10 to-transparent transform rotate-12"
+        class="absolute top-[76%] w-80 h-1.5 bg-gradient-to-r from-transparent via-indigo-300/10 to-transparent transform rotate-12"
         style="
           animation: moveHorizontal 15s ease-in-out infinite;
           animation-delay: -8s;
@@ -33,7 +33,7 @@
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
       <div class="text-center">
         <!-- Profile Image -->
-        <div class="mb-8 animate-fade-in pt-8 md:pt-0">
+        <div class="mb-10 animate-fade-in pt-8 md:pt-0">
           <div class="relative inline-block">
             <img
               src="https://avatars.githubusercontent.com/u/196710533?v=4"
@@ -49,7 +49,7 @@
         <!-- Main Heading -->
         <div class="animate-slide-up" style="animation-delay: 0.2s">
           <h1
-            class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4"
+            class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6"
           >
             Hola, soy
             <span
@@ -62,7 +62,7 @@
 
         <!-- Subtitle -->
         <div class="animate-slide-up" style="animation-delay: 0.4s">
-          <div class="max-w-2xl mx-auto mt-4 mb-10 space-y-3">
+          <div class="max-w-2xl mx-auto mt-2 mb-12 space-y-4">
             <p
               class="text-lg md:text-xl font-medium text-gray-700 dark:text-gray-200 leading-snug"
             >
@@ -74,13 +74,15 @@
             <p
               class="text-base text-gray-500 dark:text-gray-400 leading-relaxed"
             >
-              Background en growth marketing y e-commerce, integrando tecnología, marketing y negocio en experiencias web y productos impulsados por IA.
+              Background en growth marketing y e-commerce, integrando
+              tecnología, marketing y negocio en experiencias web y productos
+              impulsados por IA.
             </p>
           </div>
         </div>
 
         <!-- Skills Tags -->
-        <div class="animate-slide-up mb-8" style="animation-delay: 0.6s">
+        <div class="animate-slide-up mb-10" style="animation-delay: 0.6s">
           <div class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
             <span
               v-for="skill in skills"
