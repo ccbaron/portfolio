@@ -6,8 +6,6 @@ export default {
     "./layouts/**/*.{vue,js,ts}",
     "./components/**/*.{vue,js,ts}",
     "./composables/**/*.{vue,js,ts}",
-    // Legacy src/ kept during migration — remove when src/ is cleaned up
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {
