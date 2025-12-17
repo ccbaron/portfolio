@@ -4,6 +4,13 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  // Server-only secrets: override via NUXT_MONGODB_URI, NUXT_TELEGRAM_BOT_TOKEN, NUXT_TELEGRAM_CHAT_ID
+  runtimeConfig: {
+    mongodbUri: "",
+    telegramBotToken: "",
+    telegramChatId: "",
+  },
+
   modules: ["@pinia/nuxt"],
 
   css: ["~/assets/css/main.css"],
