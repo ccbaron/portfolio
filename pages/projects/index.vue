@@ -1,5 +1,5 @@
 <template>
-  <div class="py-20 bg-gray-50 dark:bg-dark-800">
+  <div class="pt-28 pb-20 bg-gray-50 dark:bg-dark-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16">
@@ -42,6 +42,12 @@
           <div
             :class="['aspect-video relative overflow-hidden', project.gradient]"
           >
+            <img
+              v-if="project.image"
+              :src="project.image"
+              :alt="project.title"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
             <!-- Private badge -->
             <div
               v-if="project.access === 'private'"

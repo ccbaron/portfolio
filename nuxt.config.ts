@@ -20,32 +20,32 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: "es" },
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "CC Baron - Desarrollador Full Stack | Portfolio Profesional",
+      title: "Christian Baron — Desarrollador Full Stack & Producto Digital",
       meta: [
         {
           name: "description",
           content:
-            "Portfolio profesional de Christian Baron, Growth Marketing Specialist & Desarrollador Full Stack especializado en Vue.js, React, Node.js, TypeScript y tecnologías modernas. +3 años en marketing digital y 1 año en desarrollo web.",
+            "Portfolio de Christian Baron, desarrollador Full Stack con perfil híbrido en producto digital y growth marketing. Especializado en Vue.js, Nuxt 3, Node.js, TypeScript y MongoDB.",
         },
         {
           name: "keywords",
           content:
-            "desarrollador full stack, vue.js, react, node.js, typescript, portfolio, christian baron, ccbaron, growth marketing, desarrollador web, programador, javascript",
+            "desarrollador full stack, nuxt 3, vue.js, node.js, typescript, producto digital, growth marketing, christian baron, ccbaron, portfolio, barcelona",
         },
         { name: "author", content: "Christian Baron" },
         { name: "robots", content: "index, follow" },
         { name: "language", content: "Spanish" },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://ccbaron.dev/" },
+        { property: "og:url", content: "https://ccbaron.com/" },
         {
           property: "og:title",
           content:
-            "CC Baron - Desarrollador Full Stack | Portfolio Profesional",
+            "Christian Baron — Desarrollador Full Stack & Producto Digital",
         },
         {
           property: "og:description",
           content:
-            "Portfolio profesional de Christian Baron, Growth Marketing Specialist & Desarrollador Full Stack. Especializado en Vue.js, React, Node.js y tecnologías modernas.",
+            "Portfolio de Christian Baron, desarrollador Full Stack con perfil híbrido en producto digital y growth marketing. Especializado en Vue.js, Nuxt 3, Node.js, TypeScript y MongoDB.",
         },
         {
           property: "og:image",
@@ -55,17 +55,6 @@ export default defineNuxtConfig({
         { property: "og:image:height", content: "630" },
         { property: "og:locale", content: "es_ES" },
         { property: "og:site_name", content: "CC Baron Portfolio" },
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:url", content: "https://ccbaron.dev/" },
-        {
-          name: "twitter:title",
-          content:
-            "CC Baron - Desarrollador Full Stack | Portfolio Profesional",
-        },
-        {
-          name: "twitter:image",
-          content: "https://avatars.githubusercontent.com/u/196710533?v=4",
-        },
       ],
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

@@ -1,152 +1,109 @@
-# Christian Baron - Portfolio
+# Christian Baron — Portfolio
 
-> Growth Marketing Specialist & Full Stack Developer
+> Desarrollador Full Stack con perfil híbrido en producto digital y growth marketing.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://ccbaron.vercel.app)
+[![Live](https://img.shields.io/badge/Live-ccbaron.com-blue?style=for-the-badge)](https://ccbaron.com)
+[![Nuxt](https://img.shields.io/badge/Nuxt_3-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)](https://nuxt.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)](https://vuejs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-## Overview
+## Stack
 
-Modern, responsive portfolio showcasing my expertise in full-stack development and growth marketing. Built with cutting-edge technologies and optimized for performance, accessibility, and SEO.
+**Frontend**
+- Nuxt 3 (SSR) + Vue 3 (Composition API)
+- TypeScript
+- Tailwind CSS 3
+- Pinia
 
-**🎯 Key Highlights:**
-- ⚡ **100/100 Lighthouse Score** - Performance optimized
-- 🎨 **Modern UI/UX** - Dark/Light theme with smooth animations  
-- 📱 **Fully Responsive** - Mobile-first design approach
-- 🔍 **SEO Optimized** - Meta tags, Open Graph, Schema.org
-- ♿ **Accessible** - WCAG 2.1 compliant
-- 🚀 **Fast Loading** - Vite build system with code splitting
+**Backend (server routes — Nitro)**
+- `server/api/contact.post.ts` — formulario de contacto
+- Mongoose + MongoDB Atlas — persistencia de mensajes
+- Telegram Bot API — notificaciones en tiempo real
 
-## Tech Stack
-
-**Frontend:**
-- Vue 3.5 (Composition API)
-- TypeScript 5.9
-- Tailwind CSS 3.4
-- Vite 7.1
-
-**State Management & Routing:**
-- Pinia 3.0 (State management)
-- Vue Router 4.6 (SPA routing)
-
-**Development & Build:**
-- ESLint + TypeScript ESLint
-- PostCSS + Autoprefixer
-- Git hooks with Husky
-- Git hooks con Husky
-- Deployment automático
-
-## Architecture
-
-Clean, scalable architecture following Vue 3 best practices:
+## Estructura del proyecto
 
 ```
-src/
-├── components/
-│   ├── layout/     # Navigation, Footer
-│   └── sections/   # Home, About, Projects, Contact
-├── router/         # Vue Router configuration
-├── stores/         # Pinia state management
-├── types/          # TypeScript definitions
-└── utils/          # Helper functions
+pages/                  # Enrutado automático de Nuxt
+├── index.vue           # Home / Hero
+├── about.vue           # Sobre mí
+├── contact.vue         # Contacto con formulario
+└── projects/
+    ├── index.vue       # Listado con filtros por categoría
+    └── [id].vue        # Detalle de proyecto
+
+components/
+├── layout/
+│   ├── NavBar.vue      # Navbar fijo con dark mode toggle
+│   └── Footer.vue
+
+server/
+├── api/
+│   └── contact.post.ts # POST /api/contact
+├── models/
+│   └── Contact.ts      # Schema Mongoose
+└── utils/
+    └── mongodb.ts      # Conexión singleton Mongoose
+
+data/
+└── projects.ts         # Fuente de verdad de proyectos del portfolio
+
+layouts/
+└── default.vue         # Layout compartido (NavBar + Footer)
 ```
 
-## Quick Start
-
-### Prerequisites
-- Node.js 18+
-- npm/yarn
-
-### Installation & Development
+## Inicio rápido
 
 ```bash
-# Clone and install
-git clone https://github.com/ccbaron/ccbaron.git
-cd ccbaron
+# Instalar dependencias
 npm install
 
-# Production build
-npm run build
-```
+# Desarrollo
+npm run dev
 
-## Features
-
-### 🎨 **User Interface**
-- Modern, clean design with attention to detail
-- Dark/Light theme toggle with system preference detection
-- Smooth animations and micro-interactions
-- Responsive design (mobile-first approach)
-
-### ⚡ **Performance**
-- Vite-powered build system for lightning-fast development
-- Code splitting and lazy loading
-- Optimized images and assets
-- Lighthouse score: 100/100
-
-### 🔍 **SEO & Accessibility**
-- Complete meta tags (Open Graph, Twitter Cards)
-- Semantic HTML structure
-- ARIA labels and proper contrast ratios
-- Schema.org structured data
-
-### 🛠️ **Developer Experience**
-- TypeScript for type safety
-- ESLint + Prettier for code quality
-- Git hooks for automated checks
-- Hot module replacement (HMR)
-
-## Scripts
-
-```bash
-npm run dev         # Development server
-npm run build       # Production build  
-npm run preview     # Preview build locally
-npm run type-check  # TypeScript validation
-npm run lint        # Code linting
-```
-
-## Deployment
-
-Ready for deployment on multiple platforms:
-
-- **Vercel** (Recommended): Zero-config deployment with `vercel.json`
-- **Netlify**: Optimized with `netlify.toml` configuration
-- **GitHub Pages**: Automated CI/CD with GitHub Actions
-
-```bash
-# Build for production
+# Build de producción
 npm run build
 
-# Deploy to Vercel
-npx vercel --prod
+# Preview del build
+npm run preview
 
-# Deploy to Netlify
-# Upload dist/ folder or connect Git repository
+# Validación de tipos
+npm run type-check
 ```
 
-## Project Structure
+## Variables de entorno
 
-This portfolio demonstrates:
+Copia `.env.example` a `.env` y rellena los valores:
 
-- **Modern Vue 3** patterns with Composition API
-- **TypeScript** implementation for enterprise-level projects  
-- **Component architecture** with proper separation of concerns
-- **State management** with Pinia
-- **Responsive design** with Tailwind CSS utility classes
-- **Performance optimization** techniques
-- **SEO best practices** implementation
+```bash
+cp .env.example .env
+```
 
-## Contact & Links
+| Variable | Descripción | Requerida |
+|---|---|---|
+| `NUXT_MONGODB_URI` | Connection string de MongoDB Atlas | Sí (para formulario) |
+| `NUXT_TELEGRAM_BOT_TOKEN` | Token del bot de Telegram (`@BotFather`) | No |
+| `NUXT_TELEGRAM_CHAT_ID` | Chat ID donde llegan las notificaciones | No |
+| `NUXT_PUBLIC_BASE_URL` | URL pública del sitio | No |
 
-**Christian Baron** - Growth Marketing Specialist & Full Stack Developer
+Las variables `NUXT_` (sin `PUBLIC`) son exclusivamente de servidor y nunca se exponen al cliente.
 
-[![Website](https://img.shields.io/badge/Website-ccbaron.dev-blue?style=flat-square)](https://ccbaron.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-christianbaron-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/christianbaron-)
-[![GitHub](https://img.shields.io/badge/GitHub-ccbaron-181717?style=flat-square&logo=github)](https://github.com/ccbaron)
-[![Email](https://img.shields.io/badge/Email-contacto@ccbaron.dev-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:contacto@ccbaron.dev)
+## Despliegue
+
+El proyecto incluye configuración lista para:
+
+- **Vercel** — `vercel.json` en la raíz
+- **Netlify** — `netlify.toml` en la raíz
+
+Añade las variables de entorno en el panel de tu plataforma antes de desplegar. El archivo `.env` no debe commitearse.
+
+## Características
+
+- **Dark / Light mode** — sin flash de contenido no estilado (anti-FOUC con script inline en `<head>`)
+- **SSR activado** — `ssr: true` en `nuxt.config.ts`
+- **Formulario de contacto real** — validación en frontend y backend, guardado en MongoDB, notificación a Telegram, honeypot anti-spam
+- **Proyectos con filtro multi-categoría** — fuente de verdad centralizada en `data/projects.ts`
+- **Páginas de detalle de proyecto** — rutas dinámicas `/projects/[id]`
 
 ---
 
-⭐ **If you found this project helpful, please consider giving it a star!**
+**Christian Baron** · [ccbaron.com](https://ccbaron.com) · [linkedin.com/in/christianbaron-](https://linkedin.com/in/christianbaron-)

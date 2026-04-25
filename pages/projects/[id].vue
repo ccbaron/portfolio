@@ -1,5 +1,5 @@
 <template>
-  <div class="py-20 bg-gray-50 dark:bg-dark-800 min-h-screen">
+  <div class="pt-28 pb-20 bg-gray-50 dark:bg-dark-800 min-h-screen">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Back link -->
       <NuxtLink
@@ -25,10 +25,16 @@
       <!-- Color band (same gradient as the card) -->
       <div
         :class="[
-          'w-full h-48 rounded-2xl mb-10 relative overflow-hidden',
+          'w-full h-64 rounded-2xl mb-10 relative overflow-hidden',
           project.gradient,
         ]"
       >
+        <img
+          v-if="project.image"
+          :src="project.image"
+          :alt="project.title"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
         <!-- Private badge -->
         <div
           v-if="project.access === 'private'"

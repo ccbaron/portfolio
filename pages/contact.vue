@@ -1,5 +1,5 @@
 <template>
-  <div class="py-20 bg-white dark:bg-dark-900">
+  <div class="pt-28 pb-20 bg-white dark:bg-dark-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16">
@@ -134,7 +134,8 @@
             Mensaje enviado
           </p>
           <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm">
-            Tu mensaje ha sido recibido. Me pondré en contacto contigo lo antes posible.
+            Tu mensaje ha sido recibido. Me pondré en contacto contigo lo antes
+            posible.
           </p>
           <button
             type="button"
@@ -388,7 +389,7 @@
         <div
           class="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <div class="text-left">
+          <div class="flex flex-col items-center sm:items-start">
             <p class="font-semibold text-gray-900 dark:text-white mb-1">
               Ubicación
             </p>
@@ -399,7 +400,7 @@
           <div
             class="hidden sm:block w-px h-10 bg-gray-200 dark:bg-dark-600"
           ></div>
-          <div class="text-left">
+          <div class="flex flex-col items-center sm:items-start">
             <p class="font-semibold text-gray-900 dark:text-white mb-1">
               Disponibilidad
             </p>
@@ -410,7 +411,7 @@
           <div
             class="hidden sm:block w-px h-10 bg-gray-200 dark:bg-dark-600"
           ></div>
-          <div class="text-left">
+          <div class="flex flex-col items-center sm:items-start">
             <p class="font-semibold text-gray-900 dark:text-white mb-1">
               Respuesta
             </p>
