@@ -20,12 +20,12 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: "es" },
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "Christian Baron — Desarrollador Full Stack & Producto Digital",
+      title: "Christian Baron | Full Stack & Product Developer",
       meta: [
         {
           name: "description",
           content:
-            "Portfolio de Christian Baron, desarrollador Full Stack con perfil híbrido en producto digital y growth marketing. Especializado en Vue.js, Nuxt 3, Node.js, TypeScript y MongoDB.",
+            "Portfolio de Christian Baron: desarrollo full stack, producto digital, conversión, escalabilidad e integración de IA.",
         },
         {
           name: "keywords",
@@ -39,25 +39,39 @@ export default defineNuxtConfig({
         { property: "og:url", content: "https://ccbaron.com/" },
         {
           property: "og:title",
-          content:
-            "Christian Baron — Desarrollador Full Stack & Producto Digital",
+          content: "Christian Baron | Full Stack & Product Developer",
         },
         {
           property: "og:description",
           content:
-            "Portfolio de Christian Baron, desarrollador Full Stack con perfil híbrido en producto digital y growth marketing. Especializado en Vue.js, Nuxt 3, Node.js, TypeScript y MongoDB.",
+            "Desarrollo productos digitales con foco en producto, conversión, escalabilidad e integración de IA.",
         },
         {
           property: "og:image",
-          content: "https://avatars.githubusercontent.com/u/196710533?v=4",
+          content: "https://ccbaron.com/og-cover-v2.png",
         },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
         { property: "og:locale", content: "es_ES" },
-        { property: "og:site_name", content: "CC Baron Portfolio" },
+        { property: "og:site_name", content: "Christian Baron" },
+        { name: "twitter:card", content: "summary_large_image" },
+        {
+          name: "twitter:title",
+          content: "Christian Baron | Full Stack & Product Developer",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "Desarrollo productos digitales con foco en producto, conversión, escalabilidad e integración de IA.",
+        },
+        {
+          name: "twitter:image",
+          content: "https://ccbaron.com/og-cover-v2.png",
+        },
       ],
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "canonical", href: "https://ccbaron.com" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
