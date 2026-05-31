@@ -4,6 +4,11 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  site: {
+    url: "https://ccbaron.com",
+    name: "Christian Baron",
+  },
+
   // Server-only secrets: override via NUXT_MONGODB_URI, NUXT_TELEGRAM_BOT_TOKEN, NUXT_TELEGRAM_CHAT_ID
   runtimeConfig: {
     mongodbUri: "",
@@ -11,7 +16,7 @@ export default defineNuxtConfig({
     telegramChatId: "",
   },
 
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt", "nuxt-site-config", "@nuxtjs/sitemap"],
 
   css: ["~/assets/css/main.css"],
 
@@ -71,7 +76,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "canonical", href: "https://ccbaron.com" },
+        { rel: "canonical", href: "https://ccbaron.com/" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
@@ -83,8 +88,6 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
         },
       ],
-      // Runs before first paint: applies 'dark' class from localStorage or
-      // system preference to prevent flash of unstyled content in SSR.
       script: [
         {
           innerHTML: `try{var s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s===null&&p)){document.documentElement.classList.add('dark')}}catch(e){}`,
