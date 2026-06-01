@@ -14,6 +14,10 @@ export default defineNuxtConfig({
     mongodbUri: "",
     telegramBotToken: "",
     telegramChatId: "",
+
+    public: {
+      gtmId: "",
+    },
   },
 
   modules: ["@pinia/nuxt", "nuxt-site-config", "@nuxtjs/sitemap"],
